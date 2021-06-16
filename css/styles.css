@@ -19,14 +19,14 @@ body {
 h1 {
   display: flex;
   font-size: 14px;
-  padding: 20px 0 0 32px;
+  padding: 20px 0 15px 32px;
   font-weight: 500;
   color: #4e4e4e;
   text-transform: uppercase;
 }
 
 .overlay {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
@@ -40,9 +40,14 @@ h1 {
   position: relative;
   text-align: center;
   background: #fff;
-  border: 1px solid #778;
+  border: 1px solid #dddddd;
   border-radius: 5px;
   padding: 30px 20px;
+}
+
+.modal-content .avatar {
+  height: 140px;
+  width: 140px;
 }
 
 .modal-close {
@@ -50,6 +55,20 @@ h1 {
   right: 15px;
   top: 5px;
   cursor: pointer;
+  border: none;
+  background: none;
+}
+
+hr {
+  margin: 25px;
+}
+
+.modal .text-container p {
+  color: #b4b7ba;
+}
+
+.address {
+  padding-bottom: 7px;
 }
 
 .hidden {
@@ -59,11 +78,10 @@ h1 {
 /* Grid Container */
 .grid-container {
   display: grid;
-  height: 100vh;
   grid-template-columns: repeat(3, 1fr);
-  grid-gap: 20px;
+  grid-gap: 25px;
   grid-template-rows: auto;
-  padding: 10px 30px;
+  padding: 10px 30px 45px;
 }
 
 .card {
@@ -71,8 +89,20 @@ h1 {
   border: 2px solid #dddddd;
   border-radius: 10px;
   background: white;
-  justify-content: space-around;
+  justify-content: flex-start;
   align-items: center;
+  padding-left: 15px;
+}
+
+.card:hover {
+  border: 2px solid #5b85b7;
+}
+
+.text-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-content: center;
 }
 
 .email,
@@ -85,6 +115,7 @@ h1 {
 
 .avatar {
   border-radius: 50%;
-  height: 100px;
-  width: 100px;
+  height: 120px;
+  width: 120px;
+  margin: 25px;
 }
